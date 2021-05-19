@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+ 
+</head>
+<body>
+    <div class="container ">
+        <header class="bg-primary text-white text-center">
+            <br>
+            <h1>Estado de salud en relacion al peso</h1>
+            <br>
+        </header>
+        <br>
+        <div class="row">
+            <div class="col-lg-6">
+                <form id="miForm">
+                    <label for="">Indique su estatura en cm</label> <br>
+                    <input type="number" id="txtestatura" class="form-control" min="1" max="250"><br>
+                    <label for="">Indique su peso en Kg</label> <br>
+                    <input type="number" id="txtpeso" class="form-control" min="10" max="500"><br>
+                    <input type="button" value="Calcular estado" onclick="getStatus()" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </form>
+               <br>
+            </div>
+            <div class="col-lg-6">
+                <img src="img/i1.png" class="i1.png w-75">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <footer class="bg-primary text-white text-center">
+            <br>
+            <h3>Caminar por lo menos 30 minutos al dia</h3>
+            <br>
+        </footer>
+        
+    </div>
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Resultados</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div id="resultado">
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="imagen-bajo">
+                        <img src="img/bajo.jpg" class="img-fluid w-50">
+                    </div>
+                    <div id="imagen-saludable">
+                        <img src="img/saludable.jpg" class="img-fluid">
+                    </div>
+                    <div id="imagen-obeso">
+                        <img src="img/obesa.png" class="img-fluid">
+                    </div>
+                    <div id="imagen-sobrepeso">
+                        <img src="img/sobrepeso.png" class="img-fluid">
+                    </div>
+                    <div id="imagen-morbida">
+                        <img src="img/morbida.png" class="img-fluid">
+                    </div>
+                    <div id="imagen-error">
+                        <img src="img/error.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/proceso.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
